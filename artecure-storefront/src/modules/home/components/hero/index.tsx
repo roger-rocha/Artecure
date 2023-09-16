@@ -16,11 +16,11 @@ const Hero = () => {
         <UnderlineLink href="/store">Explore products</UnderlineLink>
       </div>
       <Image
-        src="/hero.webp"
+        src="/vincent_collection.webp"
         loading="eager"
         priority={true}
         quality={90}
-        alt="Photo by @thevoncomplex https://unsplash.com/@thevoncomplex"
+        alt="Photo by @zarahome https://static.zarahome.net/8/contentEcom/dto_imagen/home/slider/desktop/vincent_collection.jpg?20230916020706&imformat=chrome&imwidth=1920&impolicy=zarahome-itxmedium"
         className="absolute inset-0"
         draggable="false"
         fill

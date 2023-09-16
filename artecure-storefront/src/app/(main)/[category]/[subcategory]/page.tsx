@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = product_categories[0]
 
   return {
-    title: `${category.name} | Acme Store`,
+    title: `${category.name} | Artecure Store`,
     description: `${category.name} category`,
   }
 }

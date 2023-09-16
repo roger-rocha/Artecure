@@ -8,6 +8,8 @@ import EmptyCartMessage from "../components/empty-cart-message"
 import SignInPrompt from "../components/sign-in-prompt"
 import ItemsTemplate from "./items"
 import Summary from "./summary"
+import Link from "next/link";
+import Button from "@modules/common/components/button";
 
 const CartTemplate = () => {
   const { cart } = useCart()
@@ -24,7 +26,20 @@ const CartTemplate = () => {
         {cart.items.length ? (
           <div className="grid grid-cols-1 small:grid-cols-[1fr_360px] gap-x-8">
             <div className="flex flex-col bg-white p-6 gap-y-6">
-              {!customer && <SignInPrompt />}
+              {!customer &&
+                  <div className="bg-white p-4 flex items-start justify-between">
+                <div>
+                  <h2 className="text-xl-semi">Already have an account?</h2>
+                  <p className="text-base-regular text-gray-700 mt-2">
+                    Sign in for a better experience.
+                  </p>
+                </div>
+                <div>
+                  <Link href="/account/login">
+                    <Button variant="secondary">Sign in</Button>
+                  </Link>
+                </div>
+              </div>}
               <ItemsTemplate region={cart?.region} items={items} />
             </div>
             <div className="relative">
