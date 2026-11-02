@@ -46,3 +46,7 @@ node_modules
 .yarn
 .swc
 dump.rdb
+
+.env.*
+
+!.env.example
